@@ -7,17 +7,17 @@
 /* Layout: a warehouse manifest — each project is a "shipment" line with a tracking code, floor-marking yellow used only as the hero stripe and status chips */
 :root{
   --bg:#eef0f2; --surface:#ffffff; --ink:#14202b; --muted:#566573; --line:#d3d8de;
-  --accent:#1d5fd1; --mark:#f2c230; --mark-ink:#14202b;
+  --accent:#1d5fd1; --panel:#e3e8ee; --mark:#f2c230; --mark-ink:#14202b;
   --display:"Big Shoulders Display","Arial Narrow",Impact,sans-serif;
   --body:"Public Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
   --mono:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
 }
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
   --bg:#0f161d; --surface:#17212b; --ink:#e7ecf1; --muted:#9aa8b5; --line:#2a3846;
-  --accent:#7aa8ff; --mark:#f2c230; --mark-ink:#14202b; color-scheme:dark}}
+  --accent:#4f86e8; --panel:#1d2a37; --mark:#f2c230; --mark-ink:#14202b; color-scheme:dark}}
 :root[data-theme="dark"]{
   --bg:#0f161d; --surface:#17212b; --ink:#e7ecf1; --muted:#9aa8b5; --line:#2a3846;
-  --accent:#7aa8ff; --mark:#f2c230; --mark-ink:#14202b; color-scheme:dark}
+  --accent:#4f86e8; --panel:#1d2a37; --mark:#f2c230; --mark-ink:#14202b; color-scheme:dark}
 
 *{box-sizing:border-box}
 body{background:var(--bg);color:var(--ink);font:400 1rem/1.6 var(--body);
@@ -94,6 +94,18 @@ blockquote{margin:6px 0 0;padding:14px 16px;background:var(--surface);border:1px
 .was{font-weight:400;color:var(--muted);font-size:.95rem}
 .org{color:var(--accent);font-weight:500;margin-top:2px}
 .job ul{margin:10px 0 0;padding-left:18px;color:var(--muted);display:grid;gap:4px;max-width:68ch}
+.projects{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.proj{background:var(--surface);border:1px solid var(--line);border-radius:4px;overflow:hidden;display:grid;align-content:start}
+.proj-body{padding:18px 20px 22px;display:grid;gap:10px}
+.ill{display:block;width:100%;height:auto;max-width:100%;border-bottom:1px solid var(--line)}
+.ill .bgp{fill:var(--panel)} .ill .f{fill:var(--surface);stroke:var(--line);stroke-width:1.5}
+.ill .a{fill:var(--accent)} .ill .m{fill:var(--mark)} .ill .l{fill:var(--line)} .ill .p{fill:var(--panel)}
+.ill .w{fill:#fff;stroke:#14202b;stroke-width:2} .ill .k{fill:#14202b}
+.ill .t{font:600 11px var(--mono);letter-spacing:.08em;fill:var(--ink)}
+.proj-top{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
+.proj h3{font:600 1.12rem/1.3 var(--body)}
+.proj p{color:var(--muted);font-size:.95rem}
+@media (max-width:560px){.projects{grid-template-columns:1fr}}
 .sec-intro{color:var(--muted);max-width:62ch;margin-top:-8px}
 .grid4{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px 40px}
 .grp{display:grid;gap:12px;align-content:start}
@@ -141,6 +153,103 @@ footer{font:400 .78rem/1.4 var(--mono);color:var(--muted);display:flex;justify-c
     </div>
   </header>
 
+  <section class="sec" aria-labelledby="proj">
+    <div class="sec-head"><h2 id="proj">Key projects</h2><span class="label">Highlights</span></div>
+    <div class="projects">
+      <article class="proj">
+        <svg class="ill" viewBox="0 0 320 140" role="img" aria-label="AFC e-commerce · Saudi Arabia illustration"><rect width="320" height="140" class="bgp"/><path d="M70 92 Q160 10 250 82" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-dasharray="6 6"/>
+<circle cx="70" cy="96" r="9" class="m"/><circle cx="250" cy="86" r="9" class="m"/>
+<text x="70" y="124" class="t" text-anchor="middle">DOHA</text><text x="250" y="114" class="t" text-anchor="middle">KSA</text>
+<rect x="138" y="44" width="44" height="22" rx="3" class="f"/><text x="160" y="59" class="t" text-anchor="middle">QAR ⇄</text></svg>
+        <div class="proj-body">
+          <div class="proj-top"><span class="chip">2026</span><span class="label">Remote operations</span></div>
+          <h3>AFC e-commerce · Saudi Arabia</h3>
+          <p>Ran e-commerce operations and finance reconciliation for AFC in Saudi Arabia remotely from Qatar, and delivered it successfully.</p>
+        </div>
+      </article>
+      <article class="proj">
+        <svg class="ill" viewBox="0 0 320 140" role="img" aria-label="Microsoft Dynamics 365 migration illustration"><rect width="320" height="140" class="bgp"/><rect x="22" y="22" width="78" height="26" rx="3" class="f"/><rect x="22" y="57" width="78" height="26" rx="3" class="f"/><rect x="22" y="92" width="78" height="26" rx="3" class="f"/>
+<text x="61" y="39" class="t" text-anchor="middle">RETAIL</text><text x="61" y="74" class="t" text-anchor="middle">E-COM</text><text x="61" y="109" class="t" text-anchor="middle">CUSTOMER</text>
+<path d="M100 35 L200 70 M100 70 L200 70 M100 105 L200 70" stroke="var(--accent)" stroke-width="2" fill="none"/>
+<circle cx="236" cy="70" r="36" class="a"/><text x="236" y="75" text-anchor="middle" style="font:700 15px var(--mono);fill:#fff">D365</text></svg>
+        <div class="proj-body">
+          <div class="proj-top"><span class="chip">2025</span><span class="label">Transformation</span></div>
+          <h3>Microsoft Dynamics 365 migration</h3>
+          <p>Initiated and led the move from disconnected retail and e-commerce systems to one integrated omnichannel backend. The MSD 365 migration removed system silos and now syncs inventory, sales and customer data in real time across every touchpoint.</p>
+        </div>
+      </article>
+      <article class="proj">
+        <svg class="ill" viewBox="0 0 320 140" role="img" aria-label="WHOOP launch in Qatar illustration"><rect width="320" height="140" class="bgp"/><rect x="40" y="56" width="240" height="28" rx="14" class="f"/>
+<rect x="126" y="40" width="68" height="60" rx="14" class="l"/><rect x="136" y="50" width="48" height="40" rx="8" class="a"/>
+<path d="M142 72 L152 72 L157 62 L164 80 L169 70 L178 70" stroke="#fff" stroke-width="2.5" fill="none" stroke-linejoin="round"/>
+<text x="160" y="124" class="t" text-anchor="middle">LAUNCH · QATAR 2024</text></svg>
+        <div class="proj-body">
+          <div class="proj-top"><span class="chip">2024</span><span class="label">Brand launch</span></div>
+          <h3>WHOOP launch in Qatar</h3>
+          <p>Managed and ran the e-commerce operations for WHOOP's first launch in Qatar through Sports Corner.</p>
+        </div>
+      </article>
+      <article class="proj">
+        <svg class="ill" viewBox="0 0 320 140" role="img" aria-label="Sports For Less outlet website illustration"><rect width="320" height="140" class="bgp"/><path d="M110 30 L210 30 L240 70 L210 110 L110 110 Z" class="m"/><circle cx="222" cy="70" r="7" class="p"/>
+<text x="160" y="80" text-anchor="middle" style="font:800 34px var(--display);fill:var(--mark-ink)">OUTLET</text>
+<text x="40" y="58" class="t">-30%</text><text x="258" y="104" class="t">-50%</text></svg>
+        <div class="proj-body">
+          <div class="proj-top"><span class="chip">2024</span><span class="label">Re-launch</span></div>
+          <h3>Sports For Less outlet website</h3>
+          <p>Re-launched the Sports For Less website as an outlet store for discounted categories.</p>
+        </div>
+      </article>
+      <article class="proj">
+        <svg class="ill" viewBox="0 0 320 140" role="img" aria-label="E-commerce middleware illustration"><rect width="320" height="140" class="bgp"/><rect x="18" y="45" width="80" height="50" rx="3" class="f"/><rect x="222" y="45" width="80" height="50" rx="3" class="f"/>
+<text x="58" y="75" class="t" text-anchor="middle">ERP</text><text x="262" y="75" class="t" text-anchor="middle">MAGENTO</text>
+<rect x="122" y="28" width="76" height="84" rx="3" class="a"/>
+<line x1="132" y1="48" x2="188" y2="48" stroke="#fff" stroke-width="2"/><line x1="132" y1="70" x2="188" y2="70" stroke="#fff" stroke-width="2"/><line x1="132" y1="92" x2="188" y2="92" stroke="#fff" stroke-width="2"/>
+<path d="M98 62 L122 62 M198 62 L222 62 M122 80 L98 80 M222 80 L198 80" stroke="var(--ink)" stroke-width="2"/></svg>
+        <div class="proj-body">
+          <div class="proj-top"><span class="chip">2023</span><span class="label">Architecture</span></div>
+          <h3>E-commerce middleware</h3>
+          <p>Took fulfilment from a manual process to an e-commerce middleware model, and designed and implemented the architecture and framework behind it.</p>
+        </div>
+      </article>
+      <article class="proj">
+        <svg class="ill" viewBox="0 0 320 140" role="img" aria-label="SAP migration from Retail Pro illustration"><rect width="320" height="140" class="bgp"/><rect x="28" y="40" width="96" height="60" rx="3" class="f"/><text x="76" y="75" class="t" text-anchor="middle">RETAIL PRO</text>
+<path d="M136 70 L182 70" stroke="var(--accent)" stroke-width="3"/><path d="M178 60 L192 70 L178 80" fill="var(--accent)"/>
+<rect x="200" y="40" width="96" height="60" rx="3" class="a"/><text x="248" y="76" text-anchor="middle" style="font:700 15px var(--mono);fill:#fff">SAP</text>
+<text x="160" y="126" class="t" text-anchor="middle">GO-LIVE 2022</text></svg>
+        <div class="proj-body">
+          <div class="proj-top"><span class="chip">2022</span><span class="label">ERP migration</span></div>
+          <h3>SAP migration from Retail Pro</h3>
+          <p>Migrated the business from Retail Pro to SAP as the new ERP.</p>
+        </div>
+      </article>
+      <article class="proj">
+        <svg class="ill" viewBox="0 0 320 140" role="img" aria-label="FIFA World Cup Qatar 2022 illustration"><rect width="320" height="140" class="bgp"/><path d="M20 118 Q160 40 300 118" fill="none" stroke="var(--line)" stroke-width="10"/>
+<path d="M44 118 Q160 62 276 118" fill="none" stroke="var(--line)" stroke-width="8"/>
+<circle cx="160" cy="80" r="30" class="w"/>
+<path d="M160 66 L172 75 L167 89 L153 89 L148 75 Z" class="k"/>
+<path d="M160 66 L160 50 M172 75 L187 70 M167 89 L176 103 M153 89 L144 103 M148 75 L133 70" stroke="#14202b" stroke-width="2"/>
+<text x="160" y="134" class="t" text-anchor="middle">QATAR 2022</text></svg>
+        <div class="proj-body">
+          <div class="proj-top"><span class="chip">2022</span><span class="label">Global event</span></div>
+          <h3>FIFA World Cup Qatar 2022</h3>
+          <p>Assigned to e-commerce operations for Sports Corner, a major official retailer of licensed merchandise and fan gear across Qatar during the tournament.</p>
+        </div>
+      </article>
+      <article class="proj">
+        <svg class="ill" viewBox="0 0 320 140" role="img" aria-label="ECOM Operations SOPs illustration"><rect width="320" height="140" class="bgp"/><rect x="110" y="18" width="100" height="108" rx="3" class="f"/>
+<rect x="124" y="34" width="12" height="12" rx="2" class="m"/><rect x="144" y="37" width="52" height="6" rx="2" class="l"/>
+<rect x="124" y="58" width="12" height="12" rx="2" class="m"/><rect x="144" y="61" width="44" height="6" rx="2" class="l"/>
+<rect x="124" y="82" width="12" height="12" rx="2" class="m"/><rect x="144" y="85" width="52" height="6" rx="2" class="l"/>
+<rect x="124" y="106" width="12" height="12" rx="2" class="l"/><rect x="144" y="109" width="36" height="6" rx="2" class="l"/></svg>
+        <div class="proj-body">
+          <div class="proj-top"><span class="chip">Framework</span><span class="label">Process</span></div>
+          <h3>ECOM Operations SOPs</h3>
+          <p>Designed the standard operating procedure architecture for e-commerce operations and rolled it out across the team.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
   <section class="sec" aria-labelledby="exp">
     <div class="sec-head"><h2 id="exp">Experience</h2><span class="label">2010 – present</span></div>
     <ol class="timeline">
@@ -151,10 +260,12 @@ footer{font:400 .78rem/1.4 var(--mono);color:var(--muted);display:flex;justify-c
           <p class="org">The Blue Group · Doha, Qatar</p>
           <ul>
             <li>Lead end-to-end operations for the Sports Corner and Sports For Less online stores: inventory master data, order processing and fulfilment.</li>
-            <li>Streamlined integrations between the ERP, Magento and middleware for real-time data accuracy.</li>
+            <li>Led the Microsoft Dynamics 365 migration (2025) and the move from manual fulfilment to an e-commerce middleware architecture (2023), integrating ERP, Magento and middleware for real-time data accuracy.</li>
+            <li>Led the SAP migration from Retail Pro (2022) and re-launched the Sports For Less website as an outlet store (2024).</li>
+            <li>Designed and implemented the ECOM Operations SOP framework.</li>
             <li>Run online payments, fraud controls and reconciliation across payment and logistics channels.</li>
             <li>Lead process improvement in omnichannel fulfilment, automated order allocation and inventory optimisation.</li>
-            <li>Core ECOM team member on the Saudi (KSA) e-commerce launch, monitoring operations remotely from Qatar.</li>
+            <li>Ran e-commerce operations for FIFA World Cup Qatar 2022, the WHOOP Qatar launch in 2024, and the AFC event in KSA in 2026.</li>
           </ul>
         </div>
       </li>
@@ -208,7 +319,7 @@ footer{font:400 .78rem/1.4 var(--mono);color:var(--muted);display:flex;justify-c
   </section>
 
   <section class="sec" aria-labelledby="work">
-    <div class="sec-head"><h2 id="work">Tools I built</h2><span class="label">In use at The Blue Group</span></div>
+    <div class="sec-head"><h2 id="work">Tools I built</h2><span class="label">4 tools in use</span></div>
     <p class="sec-intro">When a workflow costs the team time, I don't wait for an IT ticket. These are working tools I designed and built for our warehouse, dispatch and management teams.</p>
     <div class="manifest">
       <article class="item">
@@ -243,14 +354,6 @@ footer{font:400 .78rem/1.4 var(--mono);color:var(--muted);display:flex;justify-c
         </div>
         <div class="meta"><span class="chip">Management</span><span class="stack">Chart.js · SheetJS · Apps Script</span></div>
       </article>
-      <article class="item">
-        <div class="code">REF<span>ENDOW</span></div>
-        <div>
-          <h3>Endow Crafts website</h3>
-          <p>Designed and launched the website for a Qatar gifting studio, set up so the owner can update images and text herself.</p>
-        </div>
-        <div class="meta"><span class="chip alt">Live</span><span class="stack"><a href="https://endowcrafts.online" target="_blank" rel="noopener">endowcrafts.online</a></span></div>
-      </article>
     </div>
   </section>
 
@@ -283,7 +386,8 @@ footer{font:400 .78rem/1.4 var(--mono);color:var(--muted);display:flex;justify-c
     <h2 id="ct">Let's talk about your operations</h2>
     <p class="close">If you're scaling e-commerce in the Gulf, connecting retail systems that don't yet talk to each other, or looking for an operations lead who can also build the tools, I'd like to hear from you.</p>
     <div class="rows">
-      <div class="row"><b>Email</b><span id="em">waji.ds92@gmail.com</span><button class="copy" id="copyEm" type="button">Copy</button></div>
+      <div class="row"><b>Email</b><span id="em">waji.ds92@gmail.com</span><button class="copy" data-copy="em" type="button">Copy</button></div>
+      <div class="row"><b>Phone</b><span id="ph">+974 3014 0615</span><button class="copy" data-copy="ph" type="button">Copy</button></div>
       <div class="row"><b>LinkedIn</b><a href="https://qa.linkedin.com/in/mh-abdul-wajid" target="_blank" rel="noopener">in/mh-abdul-wajid</a></div>
       <div class="row"><b>Based in</b><span>Doha, Qatar</span></div>
     </div>
@@ -292,12 +396,12 @@ footer{font:400 .78rem/1.4 var(--mono);color:var(--muted);display:flex;justify-c
   <footer><span>© 2026 Abdul Wajid</span><span>Doha, Qatar</span></footer>
 </div>
 <script>
-document.getElementById('copyEm').addEventListener('click',function(e){
-  var b=e.currentTarget,t=document.getElementById('em').textContent;
-  function sel(){var r=document.createRange();r.selectNodeContents(document.getElementById('em'));var s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent='Selected';}
-  try{navigator.clipboard.writeText(t).then(function(){b.textContent='Copied'},sel)}catch(err){sel()}
+document.querySelectorAll('.copy').forEach(function(b){b.addEventListener('click',function(){
+  var el=document.getElementById(b.dataset.copy),t=el.textContent;
+  function sel(){var r=document.createRange();r.selectNodeContents(el);var s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent='Selected';}
+  try{navigator.clipboard.writeText(t).then(function(){b.textContent='Copied'},sel)}catch(e){sel()}
   setTimeout(function(){b.textContent='Copy'},2000);
-});
+});});
 </script>
 
 </body></html>
