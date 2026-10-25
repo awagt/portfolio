@@ -1,0 +1,303 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Abdul Wajid Portfolio</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800&family=Public+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: a warehouse manifest — each project is a "shipment" line with a tracking code, floor-marking yellow used only as the hero stripe and status chips */
+:root{
+  --bg:#eef0f2; --surface:#ffffff; --ink:#14202b; --muted:#566573; --line:#d3d8de;
+  --accent:#1d5fd1; --mark:#f2c230; --mark-ink:#14202b;
+  --display:"Big Shoulders Display","Arial Narrow",Impact,sans-serif;
+  --body:"Public Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0f161d; --surface:#17212b; --ink:#e7ecf1; --muted:#9aa8b5; --line:#2a3846;
+  --accent:#7aa8ff; --mark:#f2c230; --mark-ink:#14202b; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f161d; --surface:#17212b; --ink:#e7ecf1; --muted:#9aa8b5; --line:#2a3846;
+  --accent:#7aa8ff; --mark:#f2c230; --mark-ink:#14202b; color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:400 1rem/1.6 var(--body);
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:1040px;margin:0 auto;padding-block:40px 64px;display:grid;gap:72px}
+a{color:var(--accent)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+h1,h2,h3{text-wrap:balance;margin:0}
+p{margin:0}
+.label{font:600 .72rem/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+
+/* Hero */
+.hero{display:grid;gap:28px}
+.topline{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+h1{font:800 clamp(3.4rem,11vw,7.5rem)/.86 var(--display);text-transform:uppercase;letter-spacing:-.01em}
+.role{font:600 clamp(1.15rem,2.4vw,1.5rem)/1.3 var(--body);max-width:30ch}
+.stripe{height:14px;background:repeating-linear-gradient(-45deg,var(--mark) 0 14px,var(--mark-ink) 14px 28px);border-radius:2px}
+.hero-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:32px;align-items:end}
+.intro{max-width:62ch;color:var(--muted);font-size:1.06rem}
+.intro strong{color:var(--ink);font-weight:600}
+.tag{background:var(--surface);border:1px solid var(--line);border-radius:4px;padding:18px;display:grid;gap:12px}
+.barcode{height:54px;background:repeating-linear-gradient(90deg,
+  var(--ink) 0 2px,transparent 2px 5px,var(--ink) 5px 6px,transparent 6px 8px,
+  var(--ink) 8px 11px,transparent 11px 13px,var(--ink) 13px 14px,transparent 14px 18px,
+  var(--ink) 18px 20px,transparent 20px 21px,var(--ink) 21px 24px,transparent 24px 27px)}
+.tag dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:6px 14px;font:400 .82rem/1.4 var(--mono)}
+.tag dt{color:var(--muted)} .tag dd{margin:0}
+
+/* Section heads */
+.sec{display:grid;gap:28px}
+.sec-head{display:flex;align-items:baseline;gap:16px;border-bottom:2px solid var(--ink);padding-bottom:10px}
+h2{font:800 clamp(2rem,5vw,2.8rem)/1 var(--display);text-transform:uppercase}
+
+/* Work manifest */
+.manifest{display:grid}
+.item{display:grid;grid-template-columns:150px minmax(0,1fr) 190px;gap:24px;padding-block:24px;border-bottom:1px solid var(--line)}
+.code{font:600 .8rem/1.4 var(--mono);color:var(--muted)}
+.code span{display:block;color:var(--ink)}
+.item h3{font:600 1.25rem/1.3 var(--body);margin-bottom:6px}
+.item p{color:var(--muted);max-width:60ch}
+.meta{display:flex;flex-direction:column;gap:8px;align-items:flex-start}
+.chip{font:600 .7rem/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;padding:5px 8px;border-radius:3px;background:var(--mark);color:var(--mark-ink)}
+.chip.alt{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.stack{font:400 .78rem/1.5 var(--mono);color:var(--muted)}
+
+/* Two-column blocks */
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.entry{display:grid;gap:6px;padding-block:16px;border-top:1px solid var(--line)}
+.entry:first-of-type{border-top:0;padding-top:0}
+.entry h3{font:600 1.1rem/1.35 var(--body)}
+.entry p{color:var(--muted)}
+blockquote{margin:6px 0 0;padding:14px 16px;background:var(--surface);border:1px solid var(--line);border-radius:4px;font-style:italic;color:var(--ink)}
+
+.tools{display:flex;flex-wrap:wrap;gap:8px}
+.tools li{list-style:none;font:400 .85rem/1 var(--mono);padding:9px 12px;border:1px solid var(--line);border-radius:3px;background:var(--surface)}
+.tools{padding:0;margin:0}
+
+/* Contact */
+.contact{background:var(--ink);color:var(--bg);border-radius:4px;padding:36px;display:grid;gap:20px}
+.contact h2{color:var(--bg)}
+.contact .label{color:var(--mark)}
+.rows{display:grid;gap:10px}
+.row{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;font:400 .95rem/1.4 var(--mono)}
+.row b{font-weight:600;min-width:90px;color:var(--mark)}
+.row a{color:var(--bg)}
+.copy{font:600 .72rem/1 var(--mono);text-transform:uppercase;letter-spacing:.08em;padding:7px 10px;border-radius:3px;border:1px solid var(--mark);background:transparent;color:var(--mark);cursor:pointer}
+.copy:hover{background:var(--mark);color:var(--mark-ink)}
+.timeline{list-style:none;margin:0;padding:0;display:grid}
+.job{display:grid;grid-template-columns:170px minmax(0,1fr);gap:24px;padding-block:22px;border-bottom:1px solid var(--line)}
+.when{font:600 .8rem/1.5 var(--mono);color:var(--muted);font-variant-numeric:tabular-nums}
+.job.now .when::before{content:"CURRENT";display:inline-block;margin-bottom:8px;font-size:.68rem;letter-spacing:.08em;padding:4px 7px;border-radius:3px;background:var(--mark);color:var(--mark-ink)}
+.job.now .when{display:flex;flex-direction:column;align-items:flex-start}
+.job h3{font:600 1.2rem/1.35 var(--body)}
+.was{font-weight:400;color:var(--muted);font-size:.95rem}
+.org{color:var(--accent);font-weight:500;margin-top:2px}
+.job ul{margin:10px 0 0;padding-left:18px;color:var(--muted);display:grid;gap:4px;max-width:68ch}
+.sec-intro{color:var(--muted);max-width:62ch;margin-top:-8px}
+.grid4{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px 40px}
+.grp{display:grid;gap:12px;align-content:start}
+.close{max-width:60ch;opacity:.85}
+.cta-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:4px}
+.btn{font:600 .9rem/1 var(--body);padding:12px 18px;border-radius:3px;background:var(--ink);color:var(--bg);text-decoration:none;border:1px solid var(--ink)}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn:hover{background:var(--accent);border-color:var(--accent);color:#fff}
+.langs{display:flex;gap:14px;align-items:baseline;flex-wrap:wrap}
+
+footer{font:400 .78rem/1.4 var(--mono);color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+
+@media (max-width:760px){
+  .hero-grid,.cols,.grid4{grid-template-columns:1fr}
+  .item,.job{grid-template-columns:1fr;gap:10px}
+  .meta{flex-direction:row;flex-wrap:wrap}
+  .contact{padding:24px}
+}
+</style>
+
+<div class="wrap">
+  <header class="hero">
+    <div class="topline">
+      <span class="label">Doha, Qatar</span>
+      <span class="label">E-commerce Operations Lead · 13+ years</span>
+    </div>
+    <h1>Abdul<br>Wajid</h1>
+    <div class="stripe" aria-hidden="true"></div>
+    <div class="hero-grid">
+      <div style="display:grid;gap:16px">
+        <p class="role">Where retail systems meet commercial results.</p>
+        <p class="intro">I lead end-to-end e-commerce operations for <strong>Sports Corner</strong> and <strong>Sports For Less</strong> at <strong>The Blue Group, Qatar</strong>, from ERP and inventory data to payment reconciliation and 3PL delivery. Over 13 years in Qatar and Sri Lanka, I've learned that most growth problems are operations problems: stock that isn't where the system says, orders that stall between platforms, and money that doesn't reconcile. I fix them at the source, often by building the tool myself.</p>
+        <div class="cta-row"><a class="btn" href="https://qa.linkedin.com/in/mh-abdul-wajid" target="_blank" rel="noopener">Connect on LinkedIn</a><a class="btn ghost" href="#ct">Contact details</a></div>
+      </div>
+      <aside class="tag" aria-label="Summary">
+        <div class="barcode" aria-hidden="true"></div>
+        <dl>
+          <dt>NAME</dt><dd>Abdul Wajid</dd>
+          <dt>BASE</dt><dd>Doha, QA</dd>
+          <dt>ROLE</dt><dd>E-Com Ops Lead</dd>
+          <dt>AT</dt><dd>The Blue Group</dd>
+          <dt>SINCE</dt><dd>2013 in e-com &amp; retail</dd>
+        </dl>
+      </aside>
+    </div>
+  </header>
+
+  <section class="sec" aria-labelledby="exp">
+    <div class="sec-head"><h2 id="exp">Experience</h2><span class="label">2010 – present</span></div>
+    <ol class="timeline">
+      <li class="job now">
+        <div class="when">Jan 2022 – Present</div>
+        <div>
+          <h3>E-Commerce Operations Lead</h3>
+          <p class="org">The Blue Group · Doha, Qatar</p>
+          <ul>
+            <li>Lead end-to-end operations for the Sports Corner and Sports For Less online stores: inventory master data, order processing and fulfilment.</li>
+            <li>Streamlined integrations between the ERP, Magento and middleware for real-time data accuracy.</li>
+            <li>Run online payments, fraud controls and reconciliation across payment and logistics channels.</li>
+            <li>Lead process improvement in omnichannel fulfilment, automated order allocation and inventory optimisation.</li>
+            <li>Core ECOM team member on the Saudi (KSA) e-commerce launch, monitoring operations remotely from Qatar.</li>
+          </ul>
+        </div>
+      </li>
+      <li class="job">
+        <div class="when">Feb 2021 – Jul 2021</div>
+        <div>
+          <h3>Assistant Manager, E-commerce</h3>
+          <p class="org">Hypercart Lanka (Pvt) Ltd · Sri Lanka</p>
+          <ul>
+            <li>Owned traffic acquisition, conversion, A/B testing and reporting.</li>
+            <li>Re-platformed the website to a new CMS and made it mobile-ready.</li>
+          </ul>
+        </div>
+      </li>
+      <li class="job">
+        <div class="when">Oct 2013 – Feb 2021</div>
+        <div>
+          <h3>Manager, E-commerce <span class="was">· previously Marketing &amp; Business Analyst</span></h3>
+          <p class="org">Choice.lk · Sri Lanka</p>
+          <ul>
+            <li>Drove sales performance and digital campaigns for the e-commerce platform.</li>
+            <li>Analysed shopping trends to guide assortment, and reported on sales, sell-through and offer-code performance.</li>
+            <li>Worked with demand planning and warehousing for smooth fulfilment.</li>
+          </ul>
+        </div>
+      </li>
+      <li class="job">
+        <div class="when">May 2018 – Oct 2018</div>
+        <div>
+          <h3>Business Executive, Corporate Division</h3>
+          <p class="org">Softlogic Holdings PLC · Sri Lanka</p>
+          <ul><li>Built corporate accounts for office automation solutions from Panasonic, Xerox and NEC.</li></ul>
+        </div>
+      </li>
+      <li class="job">
+        <div class="when">Feb 2013 – Jul 2013</div>
+        <div>
+          <h3>Management Trainee</h3>
+          <p class="org">Oganro Ltd · Sri Lanka</p>
+        </div>
+      </li>
+      <li class="job">
+        <div class="when">Mar 2010 – Nov 2012</div>
+        <div>
+          <h3>Implementation Associate</h3>
+          <p class="org">HBT Systems (Pvt) Ltd · Sri Lanka</p>
+          <ul><li>Implemented a Hospital Information System and trained client staff.</li></ul>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <section class="sec" aria-labelledby="work">
+    <div class="sec-head"><h2 id="work">Tools I built</h2><span class="label">In use at The Blue Group</span></div>
+    <p class="sec-intro">When a workflow costs the team time, I don't wait for an IT ticket. These are working tools I designed and built for our warehouse, dispatch and management teams.</p>
+    <div class="manifest">
+      <article class="item">
+        <div class="code">REF<span>STO-SCAN</span></div>
+        <div>
+          <h3>Stock Transfer Order scan tool</h3>
+          <p>A browser-based barcode scanner for warehouse stock transfers. Each scan writes back to Google Sheets live, with a beep for good and bad scans, and alerts for over-scans, wrong-STO items and barcodes that belong to another transfer. It replaced a fragile Excel workbook.</p>
+        </div>
+        <div class="meta"><span class="chip">In daily use</span><span class="stack">HTML · Apps Script · Google Sheets · Web Audio</span></div>
+      </article>
+      <article class="item">
+        <div class="code">REF<span>SPC-DSP</span></div>
+        <div>
+          <h3>Dispatch &amp; returns tracker, Sports Corner</h3>
+          <p>Batch scanning of outgoing orders, delivery agent assignment, a returns module and printable PDF manifests. Imports Magento order exports, keeps an audit log, and has Admin, Staff and Guest roles.</p>
+        </div>
+        <div class="meta"><span class="chip">In daily use</span><span class="stack">Firebase · Magento import · GitHub Pages</span></div>
+      </article>
+      <article class="item">
+        <div class="code">REF<span>SFL-DSP</span></div>
+        <div>
+          <h3>Dispatch &amp; returns tracker, Sports For Less</h3>
+          <p>The same feature set rebuilt for the second entity, using Google Sheets tabs as the database so the team can see and edit records directly.</p>
+        </div>
+        <div class="meta"><span class="chip">In daily use</span><span class="stack">Apps Script · Google Sheets · GitHub Pages</span></div>
+      </article>
+      <article class="item">
+        <div class="code">REF<span>MGT-RPT</span></div>
+        <div>
+          <h3>E-commerce management dashboard</h3>
+          <p>Weekly and monthly reporting across both entities: gross orders, net sales, AOV, cancellation, invoice and refund rates, COD vs online payment, and an order funnel. Syncs from a Google Sheet every five minutes and prints as a clean light-theme PDF.</p>
+        </div>
+        <div class="meta"><span class="chip">Management</span><span class="stack">Chart.js · SheetJS · Apps Script</span></div>
+      </article>
+      <article class="item">
+        <div class="code">REF<span>ENDOW</span></div>
+        <div>
+          <h3>Endow Crafts website</h3>
+          <p>Designed and launched the website for a Qatar gifting studio, set up so the owner can update images and text herself.</p>
+        </div>
+        <div class="meta"><span class="chip alt">Live</span><span class="stack"><a href="https://endowcrafts.online" target="_blank" rel="noopener">endowcrafts.online</a></span></div>
+      </article>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="edu">
+    <div class="sec-head"><h2 id="edu">Education</h2></div>
+    <div class="cols">
+      <div>
+        <div class="entry">
+          <h3>BA (Hons) Global Business</h3>
+          <p>University of the West of Scotland, studying at ICBS, Doha · In progress</p>
+          <blockquote>Research: The Effect of Free Return Shipping on Online Purchase Intention among Online Fashion Shoppers Aged 18–35 in Doha, Qatar</blockquote>
+        </div>
+      </div>
+      <div>
+        <div class="entry"><h3>Advanced Diploma in Business Management</h3><p>Aquinas College of Higher Studies</p></div>
+        <div class="entry"><h3>Diploma in Business Management</h3><p>Aquinas College of Higher Studies</p></div>
+        <div class="entry"><h3>Certified Diploma in Marketing</h3><p>Sri Lanka Institute of Marketing (SLIM)</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="kit">
+    <div class="sec-head"><h2 id="kit">Core competencies</h2></div>
+    <div class="grid4"><div class="grp"><p class="label">Omnichannel &amp; fulfilment</p><ul class="tools"><li>Order processing &amp; fulfilment</li><li>Automated order allocation</li><li>3PL &amp; last-mile delivery</li><li>Dispatch &amp; returns</li><li>Cross-border (KSA) operations</li></ul></div><div class="grp"><p class="label">Platforms &amp; integrations</p><ul class="tools"><li>Magento</li><li>SAP S/4HANA</li><li>Microsoft Dynamics</li><li>ERP ↔ Magento ↔ middleware</li><li>Inventory master data</li><li>CMS re-platforming</li></ul></div><div class="grp"><p class="label">Payments &amp; reconciliation</p><ul class="tools"><li>Amazon Payment Services (Payfort)</li><li>Fraud controls &amp; compliance</li><li>Gateway, COD &amp; courier reconciliation</li><li>Auditing &amp; financial reporting</li></ul></div><div class="grp"><p class="label">Data &amp; automation</p><ul class="tools"><li>KPI dashboards</li><li>Google Sheets &amp; Apps Script</li><li>Chart.js · SheetJS</li><li>Barcode scanning apps</li><li>Excel modelling</li></ul></div></div>
+    <p class="langs"><span class="label">Languages</span> English · Sinhala · Tamil</p>
+  </section>
+
+  <section class="contact" aria-labelledby="ct">
+    <span class="label">Get in touch</span>
+    <h2 id="ct">Let's talk about your operations</h2>
+    <p class="close">If you're scaling e-commerce in the Gulf, connecting retail systems that don't yet talk to each other, or looking for an operations lead who can also build the tools, I'd like to hear from you.</p>
+    <div class="rows">
+      <div class="row"><b>Email</b><span id="em">waji.ds92@gmail.com</span><button class="copy" id="copyEm" type="button">Copy</button></div>
+      <div class="row"><b>LinkedIn</b><a href="https://qa.linkedin.com/in/mh-abdul-wajid" target="_blank" rel="noopener">in/mh-abdul-wajid</a></div>
+      <div class="row"><b>Based in</b><span>Doha, Qatar</span></div>
+    </div>
+  </section>
+
+  <footer><span>© 2026 Abdul Wajid</span><span>Doha, Qatar</span></footer>
+</div>
+<script>
+document.getElementById('copyEm').addEventListener('click',function(e){
+  var b=e.currentTarget,t=document.getElementById('em').textContent;
+  function sel(){var r=document.createRange();r.selectNodeContents(document.getElementById('em'));var s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent='Selected';}
+  try{navigator.clipboard.writeText(t).then(function(){b.textContent='Copied'},sel)}catch(err){sel()}
+  setTimeout(function(){b.textContent='Copy'},2000);
+});
+</script>
+
+</body></html>
