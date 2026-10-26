@@ -109,7 +109,7 @@ main .in{display:grid;gap:84px;padding-block:72px 72px}
 .job ul{margin:12px 0 0;padding-left:18px;color:var(--muted);display:grid;gap:5px;max-width:74ch}
 
 /* Tools */
-.tools{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.tools{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
 .tool{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:22px;display:grid;gap:12px;align-content:start}
 .tool .tt{display:flex;justify-content:space-between;gap:10px;align-items:baseline;flex-wrap:wrap}
 .tool h3{font:700 1.08rem/1.3 var(--display)}
@@ -157,6 +157,7 @@ main .in{display:grid;gap:84px;padding-block:72px 72px}
 footer{font:400 .78rem/1.4 var(--mono);color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;padding-block:0 40px}
 
 @media (max-width:980px){
+  .tools{grid-template-columns:repeat(2,minmax(0,1fr))}
   .pipe{grid-template-columns:repeat(3,minmax(0,1fr))}
   .stage:nth-child(4){border-left:0}
   .stage:nth-child(n+4){border-top:1px solid var(--line)}
@@ -402,7 +403,7 @@ footer{font:400 .78rem/1.4 var(--mono);color:var(--muted);display:flex;justify-c
     <div class="head">
       <span class="label">Built in-house · in daily use</span>
       <h2 id="tools">Tools I built</h2>
-      <p>Where off-the-shelf systems left a gap, I designed and shipped lightweight web apps on Google Apps Script, Google Sheets and Firebase. Each one captures operational data at source and turns it into reporting.</p>
+      <p>Where off-the-shelf systems left a gap, I designed practical web apps on Google Sheets, Apps Script and Firebase, defining the workflow, the data each step captures and the reports it produces. Each one captures operational data at source and turns it into reporting.</p>
     </div>
     <div class="tools">
       <article class="tool feature">
@@ -420,7 +421,7 @@ footer{font:400 .78rem/1.4 var(--mono);color:var(--muted);display:flex;justify-c
       <article class="tool">
         <div class="tt"><h3>Stock Transfer Order scan tool</h3><span class="code">WAREHOUSE</span></div>
         <p>Browser-based barcode scanner for inter-store and warehouse transfers. Validates every scan against the STO in real time and writes it back to the sheet per scan, so progress survives a page refresh.</p>
-        <dl><dt>Controls</dt><dd>Over-scan, wrong-STO and cross-transfer alerts, with audio feedback</dd><dt>Stack</dt><dd>HTML/JS · Apps Script web app (doGet/doPost) · Google Sheets</dd></dl>
+        <dl><dt>Controls</dt><dd>Over-scan, wrong-STO and cross-transfer alerts, with audio feedback</dd><dt>Stack</dt><dd>Web app · Google Apps Script · Google Sheets</dd></dl>
       </article>
       <article class="tool">
         <div class="tt"><h3>Dispatch &amp; returns trackers</h3><span class="code">SPC · SFL</span></div>
@@ -431,11 +432,6 @@ footer{font:400 .78rem/1.4 var(--mono);color:var(--muted);display:flex;justify-c
         <div class="tt"><h3>E-commerce management dashboard</h3><span class="code">REPORTING</span></div>
         <p>Live weekly and monthly reporting across both entities, syncing from Google Sheets every five minutes and exporting a print-ready PDF.</p>
         <dl><dt>KPIs</dt><dd>Gross orders, net sales, AOV, cancellation, invoice and refund rates, COD vs online, order funnel</dd><dt>Stack</dt><dd>Chart.js · SheetJS · Apps Script JSON endpoint</dd></dl>
-      </article>
-      <article class="tool">
-        <div class="tt"><h3>Shipping label generator</h3><span class="code">FULFILMENT</span></div>
-        <p>Generates 4×6 shipping labels as PDFs with a Code128 barcode, QR code and itemised SKU list, ready for courier hand-over.</p>
-        <dl><dt>Stack</dt><dd>Python · ReportLab</dd></dl>
       </article>
     </div>
   </section>
@@ -451,7 +447,7 @@ footer{font:400 .78rem/1.4 var(--mono);color:var(--muted);display:flex;justify-c
       <div><h3>Fulfilment &amp; logistics</h3><ul><li>Omnichannel fulfilment</li><li>Automated order allocation</li><li>Store-to-hub consolidation</li><li>3PL &amp; SLA management</li><li>Returns &amp; reverse logistics</li></ul></div>
       <div><h3>Systems &amp; integration</h3><ul><li>ERP migration</li><li>ERP ↔ Magento integration</li><li>Inventory master data</li><li>Workflow &amp; SOP design</li><li>Requirements &amp; UAT</li></ul></div>
       <div><h3>Payments &amp; finance</h3><ul><li>Gateway operations</li><li>Fraud controls</li><li>Billing &amp; invoicing flows</li><li>Gateway, COD &amp; courier reconciliation</li><li>Audit &amp; reporting</li></ul></div>
-      <div><h3>Data &amp; automation</h3><ul><li>KPI dashboards</li><li>Google Apps Script</li><li>Barcode scanning apps</li><li>Excel modelling</li><li>Python reporting</li></ul></div>
+      <div><h3>Data &amp; automation</h3><ul><li>KPI dashboards</li><li>Google Apps Script</li><li>Barcode scanning apps</li><li>Excel modelling</li><li>Google Sheets reporting</li></ul></div>
     </div>
   </section>
 
