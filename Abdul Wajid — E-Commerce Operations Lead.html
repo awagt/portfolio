@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Abdul Wajid — E-Commerce Operations Lead</title>
+<meta name="description" content="Abdul Wajid — E-Commerce Operations Lead at The Blue Group, Doha. Order-to-cash operations, ERP migrations, middleware and 3PL management.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#08080a; --panel:#111114; --panel2:#16161a; --line:rgba(255,255,255,.08); --line2:rgba(255,255,255,.14);
+  --text:#f2f2f4; --muted:#9a9aa3; --dim:#62626b;
+  --red:#ff3b30; --red2:#ff6159; --redglow:rgba(255,59,48,.18); --cyan:#3ad6ff;
+  --sans:"Inter Tight",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
+  --script:"Caveat",cursive;
+  --maxw:1180px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);line-height:1.55;-webkit-font-smoothing:antialiased;position:relative;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
+  background:
+   radial-gradient(900px 600px at 70% 10%,rgba(255,59,48,.13),transparent 60%),
+   radial-gradient(700px 500px at 10% 70%,rgba(255,59,48,.07),transparent 60%);}
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.35;
+  background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
+  background-size:64px 64px;mask-image:radial-gradient(ellipse at center,#000 30%,transparent 80%);-webkit-mask-image:radial-gradient(ellipse at center,#000 30%,transparent 80%)}
+main,nav,footer{position:relative;z-index:1}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+.mono{font-family:var(--mono)}
+.eyebrow{font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--red);display:inline-flex;align-items:center;gap:8px}
+.eyebrow::before{content:"";width:18px;height:2px;background:var(--red)}
+h2.title{font-size:clamp(30px,4.2vw,48px);font-weight:800;letter-spacing:-.03em;line-height:1.05;margin:12px 0 10px}
+.lead{color:var(--muted);max-width:640px;font-size:16px}
+section{padding:110px 0 40px;scroll-margin-top:70px}
+
+/* NAV */
+nav.top{position:fixed;top:16px;left:50%;transform:translateX(-50%);z-index:50;display:flex;align-items:center;gap:6px;
+  background:rgba(14,14,17,.78);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid var(--line2);border-radius:999px;padding:6px 8px 6px 6px;white-space:nowrap}
+.logo{width:30px;height:30px;border-radius:8px;background:var(--red);display:grid;place-items:center;font-family:var(--mono);font-weight:700;font-size:12px;color:#fff}
+nav.top a.l{font-size:13px;color:var(--muted);padding:6px 11px;border-radius:999px;transition:.2s}
+nav.top a.l:hover{color:#fff;background:rgba(255,255,255,.06)}
+.status{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;color:#7ee2a8;padding:6px 10px;border:1px solid rgba(126,226,168,.25);border-radius:999px;margin-left:4px}
+.status i{display:inline-block;width:6px;height:6px;border-radius:50%;background:#46d483;margin-right:6px;box-shadow:0 0 8px #46d483;animation:pulse 1.8s infinite}
+@keyframes pulse{50%{opacity:.35}}
+
+/* HERO */
+.hero{padding:120px 0 60px;min-height:100vh;position:relative}
+html,body{overflow-x:clip}
+.giant-wrap{overflow:hidden}
+.giant{font-weight:900;font-size:clamp(40px,14.5vw,215px);line-height:.82;letter-spacing:-.02em;color:transparent;-webkit-text-stroke:2px rgba(255,59,48,.75);text-align:center;user-select:none;opacity:.6;margin-bottom:-.12em;white-space:nowrap}
+.hero-grid{display:grid;grid-template-columns:1.15fr .9fr .75fr;gap:34px;align-items:start;position:relative}
+.hello{font-family:var(--script);font-size:38px;color:#fff;line-height:1;margin-bottom:6px}
+.name{display:inline-block;background:var(--red);color:#fff;font-weight:900;font-size:clamp(38px,5.4vw,66px);letter-spacing:-.02em;line-height:1;padding:10px 16px 12px;text-transform:uppercase}
+.role{font-family:var(--mono);font-size:12px;font-weight:700;letter-spacing:.1em;margin:18px 0 18px;color:#e6e6ea;border:1px solid var(--line2);display:inline-block;padding:7px 10px}
+.role b{color:var(--red)}
+.tag{color:#c9c9cf;font-size:17px;max-width:470px}
+.tag strong{color:#fff}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin:26px 0 30px}
+.btn{font-family:var(--mono);font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:13px 18px;border-radius:4px;border:1px solid var(--line2);transition:.25s;cursor:pointer;background:none;color:#fff}
+.btn.ghost{color:var(--cyan);border-color:rgba(58,214,255,.35)}
+.btn.ghost:hover{background:rgba(58,214,255,.08);transform:translateY(-2px)}
+.btn.solid{background:#1d1d22}
+.btn.solid:hover{background:#26262c;transform:translateY(-2px)}
+.btn.red{background:var(--red);border-color:var(--red)}
+.btn.red:hover{background:var(--red2);transform:translateY(-2px)}
+.stats{display:flex;gap:22px;flex-wrap:wrap}
+.stat .n{font-size:30px;font-weight:800;letter-spacing:-.02em}
+.stat .n em{font-style:normal;color:var(--red)}
+.stat .k{font-family:var(--mono);font-size:10.5px;color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
+.photo{position:relative;aspect-ratio:4/5;background:var(--red);overflow:hidden;box-shadow:0 30px 80px -20px rgba(255,59,48,.45)}
+.photo img,.photo svg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.photo img{filter:grayscale(1) contrast(1.1)}
+.photo img{mix-blend-mode:multiply}
+.photo .badge{position:absolute;left:12px;bottom:12px;font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:.1em;background:rgba(8,8,10,.85);border:1px solid rgba(255,255,255,.2);padding:6px 9px;z-index:2}
+.photo .badge i{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--red);margin-right:6px}
+.photo.glitch{animation:glitch .7s steps(2) 1}
+@keyframes glitch{
+ 0%{transform:translate(0);filter:none}
+ 15%{transform:translate(-6px,2px);filter:drop-shadow(6px 0 0 #3ad6ff) drop-shadow(-6px 0 0 #ff3b30)}
+ 30%{transform:translate(5px,-3px);clip-path:inset(10% 0 40% 0)}
+ 45%{transform:translate(-3px,1px);clip-path:inset(50% 0 10% 0)}
+ 60%{transform:translate(2px,0);clip-path:none;filter:drop-shadow(-4px 0 0 #3ad6ff)}
+ 100%{transform:none;filter:none;clip-path:none}}
+.hl{display:flex;flex-direction:column;gap:12px}
+.hl .item{border:1px solid var(--line);background:rgba(17,17,20,.7);padding:14px 14px 12px}
+.hl .num{font-family:var(--mono);font-size:10px;color:var(--dim);display:flex;justify-content:space-between}
+.hl h4{font-size:15px;margin:6px 0 3px}
+.hl p{font-size:12.5px;color:var(--muted);line-height:1.45}
+
+/* ABOUT */
+.about-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:40px;margin-top:30px}
+.about-grid p{color:#c4c4cb;margin-bottom:16px;font-size:16px}
+.about-grid p strong{color:#fff}
+.quote{border-left:3px solid var(--red);padding:6px 0 6px 18px;font-style:italic;font-weight:600;color:#fff!important;font-size:18px!important}
+.side-card{border:1px solid var(--line);background:var(--panel);padding:18px;margin-bottom:12px}
+.side-card h5{font-family:var(--mono);font-size:11px;letter-spacing:.12em;color:var(--red);text-transform:uppercase;margin-bottom:10px}
+.side-card ul{list-style:none}
+.side-card li{font-size:13.5px;color:#d4d4da;padding:6px 0;border-top:1px solid var(--line)}
+.side-card li:first-child{border-top:0}
+.side-card li span{display:block;font-size:12px;color:var(--muted)}
+.pipeline{margin-top:46px;display:grid;grid-template-columns:repeat(6,1fr);gap:0;border:1px solid var(--line);background:var(--panel)}
+.pipe{padding:18px 16px;border-left:1px solid var(--line);position:relative}
+.pipe:first-child{border-left:0}
+.pipe .s{font-family:var(--mono);font-size:10px;color:var(--red);letter-spacing:.1em}
+.pipe h4{font-size:15px;margin:6px 0 4px}
+.pipe p{font-size:12px;color:var(--muted);line-height:1.45}
+.pipe:not(:last-child)::after{content:"→";position:absolute;right:-8px;top:18px;color:var(--red);font-family:var(--mono);font-size:13px;background:var(--panel);z-index:1}
+.pipe-label{font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:.08em;margin-top:40px;text-transform:uppercase}
+
+/* PROJECTS */
+.card{border:1px solid var(--line);background:linear-gradient(180deg,var(--panel2),var(--panel));padding:22px;position:relative;transition:transform .3s,border-color .3s,box-shadow .3s}
+.card:hover{transform:translateY(-4px);border-color:rgba(255,59,48,.45);box-shadow:0 20px 50px -25px rgba(255,59,48,.5)}
+.ctag{display:inline-block;font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#fff;background:rgba(255,59,48,.16);border:1px solid rgba(255,59,48,.4);padding:4px 8px}
+.year{position:absolute;top:22px;right:22px;font-family:var(--mono);font-size:11px;color:var(--dim)}
+.card h3{font-size:20px;font-weight:700;letter-spacing:-.01em;margin:14px 0 8px;line-height:1.2}
+.card p{font-size:14px;color:var(--muted)}
+.card ul{margin:12px 0 0 0;list-style:none}
+.card li{font-size:13px;color:#cfcfd6;padding:3px 0 3px 16px;position:relative}
+.card li::before{content:"";position:absolute;left:0;top:11px;width:7px;height:2px;background:var(--red)}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:16px}
+.chip{font-family:var(--mono);font-size:10.5px;color:#cfcfd6;border:1px solid var(--line2);padding:4px 8px;background:rgba(255,255,255,.02)}
+.featured{margin-top:36px;padding:28px}
+.featured h3{font-size:clamp(22px,3vw,30px)}
+.fstats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:22px 0}
+.fstat{border:1px solid var(--line);padding:14px;background:rgba(0,0,0,.25)}
+.fstat .n{font-size:26px;font-weight:800;color:var(--red)}
+.fstat .k{font-family:var(--mono);font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.tabs-h{font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:.1em;margin-bottom:10px}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
+.tab{font-family:var(--mono);font-size:11px;padding:8px 12px;border:1px solid var(--line2);background:none;color:#cfcfd6;cursor:pointer;transition:.2s}
+.tab:hover{border-color:var(--red)}
+.tab.on{background:var(--red);border-color:var(--red);color:#fff}
+.tpanel{border:1px solid var(--line);padding:16px 18px;background:rgba(0,0,0,.25);min-height:96px}
+.tpanel .s{font-family:var(--mono);font-size:10px;color:var(--red);letter-spacing:.1em}
+.tpanel h4{font-size:16px;margin:4px 0 6px}
+.tpanel p{font-size:14px;color:var(--muted)}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:16px}
+.span2{grid-column:span 2}
+
+/* EXPERIENCE */
+.timeline{margin-top:30px;border-left:1px solid var(--line2);padding-left:26px}
+.job{position:relative;padding:4px 0 26px}
+.job::before{content:"";position:absolute;left:-31px;top:10px;width:9px;height:9px;background:var(--bg);border:2px solid var(--red)}
+.job.now::before{background:var(--red);box-shadow:0 0 12px var(--red)}
+.job .d{font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:.05em}
+.job h4{font-size:18px;margin:2px 0 0}
+.job .r{color:#cfcfd6;font-size:14px}
+
+/* MATRIX */
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0 18px}
+.filter{font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.06em;padding:8px 13px;border:1px solid var(--line2);background:none;color:#cfcfd6;cursor:pointer;transition:.2s;text-transform:uppercase}
+.filter.on{background:var(--red);border-color:var(--red);color:#fff}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.sk{border:1px solid var(--line);background:var(--panel);padding:16px;transition:opacity .35s,transform .35s,border-color .3s}
+.sk:hover{border-color:rgba(255,59,48,.45)}
+.sk .c{font-family:var(--mono);font-size:10px;color:var(--red);letter-spacing:.1em;text-transform:uppercase}
+.sk h4{font-size:15px;margin:6px 0 4px}
+.sk p{font-size:12.5px;color:var(--muted);line-height:1.45}
+.sk.off{display:none}
+.partners{margin-top:26px;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.partners .lbl{font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:.1em;margin-right:6px}
+
+/* CONTACT */
+.contact{text-align:center;padding:140px 0 60px}
+.contact h2{font-size:clamp(34px,5.6vw,64px);font-weight:800;letter-spacing:-.03em;line-height:1.05;margin:14px auto 14px;max-width:820px}
+.contact p.lead{margin:0 auto}
+.crow{display:flex;justify-content:center;flex-wrap:wrap;gap:12px;align-items:center;margin:30px 0 22px}
+.email{font-family:var(--mono);font-size:15px;font-weight:700}
+.links{display:flex;justify-content:center;flex-wrap:wrap;gap:22px;font-family:var(--mono);font-size:12.5px;color:var(--muted)}
+.links a:hover{color:#fff}
+footer{text-align:center;font-family:var(--mono);font-size:11px;color:var(--dim);padding:40px 0 120px;line-height:1.8}
+
+/* BUILD SYSTEM */
+.bh{opacity:0!important;transform:translateY(8px)}
+.bv{opacity:1;transform:none;transition:opacity .5s ease,transform .5s ease}
+.typing{opacity:1!important;transform:none!important}
+.typing::after{content:"▍";color:var(--cyan);animation:pulse .6s infinite;font-weight:400}
+#agentLayer{position:absolute;top:0;left:0;width:100%;pointer-events:none;z-index:60;overflow:hidden}
+.cur{position:absolute;top:0;left:0;will-change:transform;transition-property:transform,opacity;transition-timing-function:cubic-bezier(.45,.05,.25,1)}
+.cur svg{width:16px;height:16px;display:block;filter:drop-shadow(0 2px 3px rgba(0,0,0,.6))}
+.cur span{position:absolute;left:14px;top:13px;font-family:var(--mono);font-size:9px;font-weight:700;padding:2px 5px;border-radius:3px;color:#08080a;white-space:nowrap}
+.sel{position:absolute;border:1px solid var(--cyan);background:rgba(58,214,255,.06);pointer-events:none;transition:opacity .35s;box-shadow:0 0 0 1px rgba(58,214,255,.15)}
+.sel i{position:absolute;width:6px;height:6px;background:#08080a;border:1px solid var(--cyan)}
+.sel i:nth-child(1){left:-4px;top:-4px}.sel i:nth-child(2){right:-4px;top:-4px}.sel i:nth-child(3){left:-4px;bottom:-4px}.sel i:nth-child(4){right:-4px;bottom:-4px}
+.sel b{position:absolute;left:-1px;top:-19px;font-family:var(--mono);font-size:9px;font-weight:700;background:var(--cyan);color:#08080a;padding:2px 5px;white-space:nowrap}
+#buildBar{position:fixed;left:50%;bottom:18px;transform:translateX(-50%);z-index:70;display:flex;align-items:center;gap:12px;
+  background:rgba(14,14,17,.9);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid var(--line2);border-radius:999px;padding:8px 10px 8px 14px;font-family:var(--mono);font-size:11px;color:#cfcfd6;white-space:nowrap;box-shadow:0 12px 40px rgba(0,0,0,.5)}
+#buildBar .dots{display:flex}
+#buildBar .dots i{width:10px;height:10px;border-radius:50%;margin-left:-3px;border:1.5px solid #0e0e11}
+#buildBar b{color:#fff}
+#buildBar .prog{width:110px;height:3px;background:rgba(255,255,255,.1);border-radius:3px;overflow:hidden}
+#buildBar .prog div{height:100%;width:0;background:linear-gradient(90deg,var(--cyan),#7aa8ff);transition:width .3s}
+#buildBar .st{color:#08080a;background:var(--cyan);padding:3px 8px;border-radius:999px;font-weight:700;font-size:10px}
+#buildBar button{font-family:var(--mono);font-size:10.5px;font-weight:700;background:rgba(255,255,255,.08);color:#fff;border:0;border-radius:999px;padding:5px 11px;cursor:pointer}
+#buildBar button:hover{background:rgba(255,255,255,.16)}
+#buildBar button.replay{background:var(--cyan);color:#08080a}
+
+/* RESPONSIVE */
+@media (max-width:1020px){
+  .hero-grid{grid-template-columns:1fr 1fr}
+  .hl{grid-column:span 2;flex-direction:row}
+  .hl .item{flex:1}
+  .pipeline{grid-template-columns:repeat(3,1fr)}
+  .pipe:nth-child(4){border-left:0}
+  .pipe:nth-child(n+4){border-top:1px solid var(--line)}
+  .pipe:nth-child(3)::after{display:none}
+  .grid3{grid-template-columns:1fr 1fr}
+  .grid4{grid-template-columns:repeat(3,1fr)}
+  .fstats{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:720px){
+  .wrap{padding:0 18px}
+  nav.top a.l.hide-m{display:none}
+  nav.top{top:10px}
+  .status{display:none}
+  .hero{padding-top:96px}
+  .giant{-webkit-text-stroke:1.2px rgba(255,59,48,.8)}
+  .hero-grid{grid-template-columns:1fr;gap:26px}
+  .hl{grid-column:auto;flex-direction:column}
+  .photo{max-width:340px}
+  .about-grid{grid-template-columns:1fr}
+  .pipeline{grid-template-columns:1fr 1fr}
+  .pipe{border-left:0!important;border-top:1px solid var(--line)}
+  .pipe:nth-child(-n+2){border-top:0}
+  .pipe:nth-child(odd){border-right:1px solid var(--line)}
+  .pipe::after{display:none}
+  .grid3{grid-template-columns:1fr}
+  .span2{grid-column:auto}
+  .grid4{grid-template-columns:1fr 1fr}
+  section{padding-top:80px}
+  #buildBar{font-size:10px;gap:8px;bottom:12px;padding:7px 8px 7px 12px}
+  #buildBar .prog{width:50px}
+  #buildBar .lay{display:none}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<nav class="top" aria-label="Main">
+  <a href="#top" class="logo" aria-label="Home">AW</a>
+  <a class="l" href="#about">About</a>
+  <a class="l" href="#flagships">Flagships</a>
+  <a class="l hide-m" href="#career">Career</a>
+  <a class="l hide-m" href="#matrix">Matrix</a>
+  <a class="l" href="#contact">Contact</a>
+  <span class="status"><i></i>OPEN TO CONVERSATIONS</span>
+</nav>
+
+<main id="top">
+<!-- ================= HERO ================= -->
+<header class="hero wrap" data-section="Hero">
+  <div class="giant" data-b="pop" data-n="Hero Mark">PORTFOLIO</div>
+  <div class="hero-grid">
+    <div>
+      <div class="hello" data-b="type" data-n="Greeting">Hello, I'm</div>
+      <h1 class="name" data-b="pop" data-n="Name Block">Abdul Wajid.</h1><br>
+      <div class="role" data-b="type" data-n="Role Tag"><b>●</b> E-COMMERCE OPERATIONS LEAD · DOHA</div>
+      <p class="tag" data-b="type" data-n="Tagline">I run the systems and partners that move an online order from <strong>checkout to delivery to reconciled payment</strong>, leading e-commerce operations for <strong>Sports Corner</strong> and <strong>Sports For Less</strong> in Qatar.</p>
+      <div class="btns">
+        <a href="#flagships" class="btn ghost" data-b="pop" data-n="CTA Primary">View Flagships →</a>
+        <a href="#contact" class="btn solid" data-b="pop" data-n="CTA Secondary">Get in Touch</a>
+      </div>
+      <div class="stats">
+        <div class="stat" data-b="count" data-n="Stat: Years"><div class="n"><span class="cnt" data-to="13">13</span><em>+</em></div><div class="k">Years in E-Com</div></div>
+        <div class="stat" data-b="count" data-n="Stat: ERP"><div class="n"><span class="cnt" data-to="2">2</span></div><div class="k">ERP Migrations</div></div>
+        <div class="stat" data-b="count" data-n="Stat: 3PL"><div class="n"><span class="cnt" data-to="7">7</span></div><div class="k">3PL Partners</div></div>
+        <div class="stat" data-b="count" data-n="Stat: Gateways"><div class="n"><span class="cnt" data-to="3">3</span></div><div class="k">Payment Gateways</div></div>
+      </div>
+    </div>
+
+    <div class="photo" data-b="glitch" data-n="Portrait">
+      <!-- To use your own photo: upload photo.jpg next to this file. Falls back to the silhouette if missing. -->
+      <svg viewBox="0 0 400 500" aria-hidden="true">
+        <rect width="400" height="500" fill="#ff3b30"/>
+        <circle cx="200" cy="185" r="78" fill="#141416"/>
+        <path d="M60 500 C70 360 130 300 200 300 C270 300 330 360 340 500 Z" fill="#141416"/>
+        <path d="M175 300 L200 360 L225 300 Z" fill="#e9e9ec"/>
+        <path d="M196 318 L204 318 L208 400 L200 412 L192 400 Z" fill="#ff3b30"/>
+      </svg>
+      <img src="photo.jpg" alt="Portrait of Abdul Wajid" onerror="this.remove()">
+      <div class="badge"><i></i>OPERATIONS ONLINE</div>
+    </div>
+
+    <div class="hl">
+      <div class="item" data-b="pop" data-n="Highlight 01"><div class="num"><span>01</span><span>2025</span></div><h4>Dynamics 365 Migration</h4><p>Designed the e-commerce order-to-cash workflow on the new ERP.</p></div>
+      <div class="item" data-b="pop" data-n="Highlight 02"><div class="num"><span>02</span><span>2023</span></div><h4>Storefront ↔ ERP Middleware</h4><p>Automated order, stock and invoice flow from Magento.</p></div>
+      <div class="item" data-b="pop" data-n="Highlight 03"><div class="num"><span>03</span><span>2022</span></div><h4>FIFA World Cup Qatar</h4><p>Peak licensed-merchandise volumes for Sports Corner.</p></div>
+    </div>
+  </div>
+</header>
+
+<!-- ================= ABOUT ================= -->
+<section id="about" class="wrap" data-section="About">
+  <span class="eyebrow" data-b="type" data-n="Eyebrow">Operator Profile</span>
+  <h2 class="title" data-b="type" data-n="Section Title">Background &amp; Philosophy</h2>
+  <div class="about-grid">
+    <div>
+      <p data-b="type" data-n="Bio 01">I'm Abdul Wajid, <strong>E-Commerce Operations Lead at The Blue Group</strong> in Doha since 2022. I own the operation behind <strong>Sports Corner</strong> and <strong>Sports For Less</strong> — Magento storefronts, the ERP, three payment gateways and seven logistics partners — and lead a 10-member operations team.</p>
+      <p data-b="type" data-n="Bio 02">Over 13 years across Sri Lanka and Qatar, I've led <strong>two ERP migrations</strong>, built middleware between storefront and ERP, and run e-commerce for <strong>FIFA World Cup Qatar 2022</strong> and the <strong>AFC Champions League Elite</strong>.</p>
+      <p class="quote" data-b="type" data-n="Philosophy">"Every order should flow from checkout to cash without anyone having to chase it."</p>
+    </div>
+    <div>
+      <div class="side-card" data-b="pop" data-n="Education">
+        <h5>Education</h5>
+        <ul>
+          <li>BA (Hons) Global Business<span>University of the West of Scotland (ICBS) · Final year</span></li>
+          <li>Advanced Diploma &amp; Diploma in Business Management<span>Aquinas College of Higher Studies</span></li>
+          <li>Certified Diploma in Marketing<span>Sri Lanka Institute of Marketing (SLIM)</span></li>
+        </ul>
+      </div>
+      <div class="side-card" data-b="pop" data-n="Languages">
+        <h5>Languages</h5>
+        <ul><li>English · Sinhala · Tamil</li></ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="pipe-label" data-b="type" data-n="Scope Label">// Operating scope — order to cash</div>
+  <div class="pipeline">
+    <div class="pipe" data-b="pop" data-n="Stage 01"><div class="s">01</div><h4>Storefront</h4><p>Magento · SPC &amp; SFL</p></div>
+    <div class="pipe" data-b="pop" data-n="Stage 02"><div class="s">02</div><h4>Payments</h4><p>Payfort · Tap · PayLater · COD</p></div>
+    <div class="pipe" data-b="pop" data-n="Stage 03"><div class="s">03</div><h4>ERP &amp; Middleware</h4><p>Dynamics 365</p></div>
+    <div class="pipe" data-b="pop" data-n="Stage 04"><div class="s">04</div><h4>Warehouse</h4><p>STO · scanning</p></div>
+    <div class="pipe" data-b="pop" data-n="Stage 05"><div class="s">05</div><h4>Last Mile</h4><p>7 delivery partners</p></div>
+    <div class="pipe" data-b="pop" data-n="Stage 06"><div class="s">06</div><h4>Returns &amp; Recon</h4><p>Finance reconciliation</p></div>
+  </div>
+</section>
+
+<!-- ================= FLAGSHIPS ================= -->
+<section id="flagships" class="wrap" data-section="Flagships">
+  <span class="eyebrow" data-b="type" data-n="Eyebrow">Operational Showcase</span>
+  <h2 class="title" data-b="type" data-n="Section Title">Flagship Deployments</h2>
+  <p class="lead" data-b="type" data-n="Section Lead">Migrations, launches and peak events — the projects that shaped how our e-commerce operation runs today.</p>
+
+  <article class="card featured" data-b="pop" data-n="Featured Project">
+    <span class="ctag">● Core Platform</span><span class="year">2025</span>
+    <h3>SAP → Microsoft Dynamics 365 Migration</h3>
+    <p>Designed the e-commerce workflow for the move to an integrated omnichannel backend across both storefronts.</p>
+    <div class="fstats">
+      <div class="fstat"><div class="n">2</div><div class="k">Storefronts</div></div>
+      <div class="fstat"><div class="n">3</div><div class="k">Payment gateways</div></div>
+      <div class="fstat"><div class="n">7</div><div class="k">Logistics partners</div></div>
+      <div class="fstat"><div class="n">~70%</div><div class="k">Faster order processing*</div></div>
+    </div>
+    <div class="tabs-h">WORKFLOW LAYERS — click to inspect</div>
+    <div class="tabs" role="tablist">
+      <button class="tab on" data-t="0">L1 Order-to-Cash</button>
+      <button class="tab" data-t="1">L2 Billing</button>
+      <button class="tab" data-t="2">L3 Inventory Sync</button>
+      <button class="tab" data-t="3">L4 Finance Reporting</button>
+    </div>
+    <div class="tpanel" id="tpanel"></div>
+    <p style="font-size:11.5px;color:var(--dim);margin-top:10px" class="mono">* Combined effect of the 2023 middleware and the 2025 Dynamics 365 migration.</p>
+  </article>
+
+  <div class="grid3">
+    <article class="card" data-b="pop" data-n="Project: AFC"><span class="ctag">Remote Ops · KSA</span><span class="year">2026</span>
+      <h3>AFC Champions League Elite</h3>
+      <p>Remote e-commerce operations for the tournament in Saudi Arabia.</p>
+      <ul><li>Order processing</li><li>Fulfilment oversight with Aramex</li><li>Finance reconciliation</li></ul>
+      <div class="chips"><span class="chip">Remote ops</span><span class="chip">Aramex</span></div></article>
+
+    <article class="card" data-b="pop" data-n="Project: WHOOP"><span class="ctag">Brand Launch</span><span class="year">2024</span>
+      <h3>WHOOP Launch in Qatar</h3>
+      <p>Ran launch-day operations through Sports Corner.</p>
+      <ul><li>Catalogue go-live</li><li>Stock readiness</li><li>Delivery operations</li></ul>
+      <div class="chips"><span class="chip">Magento</span><span class="chip">Launch ops</span></div></article>
+
+    <article class="card" data-b="pop" data-n="Project: SFL"><span class="ctag">Storefront</span><span class="year">2024</span>
+      <h3>Sports For Less Outlet Site</h3>
+      <p>Relaunched Sports For Less as a discount outlet storefront.</p>
+      <ul><li>Outlet positioning</li><li>Discounted category focus</li></ul>
+      <div class="chips"><span class="chip">Magento</span><span class="chip">Relaunch</span></div></article>
+
+    <article class="card" data-b="pop" data-n="Project: Middleware"><span class="ctag">Automation</span><span class="year">2023</span>
+      <h3>E-Commerce Middleware</h3>
+      <p>Moved fulfilment from manual handling to an automated flow between Magento and the ERP.</p>
+      <ul><li>Order flow</li><li>Stock sync</li><li>Invoice posting</li></ul>
+      <div class="chips"><span class="chip">Magento</span><span class="chip">Middleware</span><span class="chip">ERP</span></div></article>
+
+    <article class="card" data-b="pop" data-n="Project: SAP"><span class="ctag">ERP Migration</span><span class="year">2022</span>
+      <h3>Retail Pro → SAP Migration</h3>
+      <p>Rebuilt the e-commerce data and posting layer on SAP.</p>
+      <ul><li>SKU master data mapping</li><li>Order posting redesign</li><li>Invoicing redesign</li></ul>
+      <div class="chips"><span class="chip">Retail Pro</span><span class="chip">SAP S/4HANA</span></div></article>
+
+    <article class="card" data-b="pop" data-n="Project: FIFA"><span class="ctag">Peak Event</span><span class="year">2022</span>
+      <h3>FIFA World Cup Qatar 2022</h3>
+      <p>E-commerce operations for Sports Corner during the tournament.</p>
+      <ul><li>Peak licensed-merchandise volumes</li><li>Last-mile coordination</li></ul>
+      <div class="chips"><span class="chip">Peak ops</span><span class="chip">Last mile</span></div></article>
+
+    <article class="card" data-b="pop" data-n="Project: SOPs"><span class="ctag">Governance</span><span class="year">—</span>
+      <h3>ECOM Operations SOPs</h3>
+      <p>Designed and rolled out the standard operating procedures framework for the team.</p>
+      <ul><li>Process standards</li><li>Team rollout</li></ul>
+      <div class="chips"><span class="chip">SOP design</span><span class="chip">Training</span></div></article>
+
+    <article class="card span2" data-b="pop" data-n="Built Tools"><span class="ctag">● Built In-House</span><span class="year">Toolkit</span>
+      <h3>Operations Tools I Built</h3>
+      <p>Lightweight internal apps my team uses every day — built without a dev team.</p>
+      <ul><li>Last-mile &amp; consolidation SLA tracker</li><li>Stock transfer (STO) scanning tool</li><li>Dispatch &amp; returns trackers</li><li>E-commerce KPI dashboard</li></ul>
+      <div class="chips"><span class="chip">Google Sheets</span><span class="chip">Apps Script</span><span class="chip">Firebase</span><span class="chip">GitHub Pages</span></div></article>
+  </div>
+</section>
+
+<!-- ================= CAREER ================= -->
+<section id="career" class="wrap" data-section="Career">
+  <span class="eyebrow" data-b="type" data-n="Eyebrow">Career Log</span>
+  <h2 class="title" data-b="type" data-n="Section Title">Experience</h2>
+  <div class="timeline">
+    <div class="job now" data-b="pop" data-n="Role: Blue Group"><div class="d">JAN 2022 — PRESENT · DOHA</div><h4>The Blue Group</h4><div class="r">E-Commerce Operations Lead</div></div>
+    <div class="job" data-b="pop" data-n="Role: Hypercart"><div class="d">FEB 2021 — JUL 2021 · SRI LANKA</div><h4>Hypercart Lanka</h4><div class="r">Assistant Manager, E-Commerce</div></div>
+    <div class="job" data-b="pop" data-n="Role: Choice.lk"><div class="d">OCT 2013 — FEB 2021 · SRI LANKA</div><h4>Choice.lk</h4><div class="r">Manager, E-Commerce</div></div>
+    <div class="job" data-b="pop" data-n="Role: Softlogic"><div class="d">MAY 2018 — OCT 2018 · SRI LANKA</div><h4>Softlogic Holdings</h4><div class="r">Business Executive, Corporate Division</div></div>
+    <div class="job" data-b="pop" data-n="Role: Oganro"><div class="d">FEB 2013 — JUL 2013 · SRI LANKA</div><h4>Oganro Ltd</h4><div class="r">Management Trainee</div></div>
+    <div class="job" data-b="pop" data-n="Role: HBT"><div class="d">MAR 2010 — NOV 2012 · SRI LANKA</div><h4>HBT Systems</h4><div class="r">Implementation Associate</div></div>
+  </div>
+</section>
+
+<!-- ================= MATRIX ================= -->
+<section id="matrix" class="wrap" data-section="Matrix">
+  <span class="eyebrow" data-b="type" data-n="Eyebrow">Capability Index</span>
+  <h2 class="title" data-b="type" data-n="Section Title">The Systems Matrix</h2>
+  <p class="lead" data-b="type" data-n="Section Lead">Platforms I run, operations I own, and the tools I build to keep them measurable.</p>
+  <div class="filters" data-b="pop" data-n="Filters">
+    <button class="filter on" data-f="all">All</button>
+    <button class="filter" data-f="plat">Platforms</button>
+    <button class="filter" data-f="ops">Operations</button>
+    <button class="filter" data-f="tools">Tools &amp; Data</button>
+  </div>
+  <div class="grid4">
+    <div class="sk" data-c="plat" data-b="pop" data-n="Skill"><div class="c">Platform</div><h4>Magento</h4><p>Storefront operations for two brands.</p></div>
+    <div class="sk" data-c="plat" data-b="pop" data-n="Skill"><div class="c">Platform</div><h4>Microsoft Dynamics 365</h4><p>E-commerce workflow on the omnichannel ERP.</p></div>
+    <div class="sk" data-c="plat" data-b="pop" data-n="Skill"><div class="c">Platform</div><h4>SAP S/4HANA</h4><p>Order posting and invoicing design.</p></div>
+    <div class="sk" data-c="plat" data-b="pop" data-n="Skill"><div class="c">Platform</div><h4>Retail Pro · Middleware</h4><p>Legacy migration and storefront–ERP integration.</p></div>
+    <div class="sk" data-c="ops" data-b="pop" data-n="Skill"><div class="c">Operations</div><h4>ERP Migration</h4><p>Two migrations led end to end.</p></div>
+    <div class="sk" data-c="ops" data-b="pop" data-n="Skill"><div class="c">Operations</div><h4>3PL &amp; SLA Management</h4><p>Seven logistics and last-mile partners.</p></div>
+    <div class="sk" data-c="ops" data-b="pop" data-n="Skill"><div class="c">Operations</div><h4>Payment Gateway Ops</h4><p>Gateways, fraud controls and COD.</p></div>
+    <div class="sk" data-c="ops" data-b="pop" data-n="Skill"><div class="c">Operations</div><h4>Reconciliation</h4><p>Payment and returns reconciled with finance.</p></div>
+    <div class="sk" data-c="tools" data-b="pop" data-n="Skill"><div class="c">Tools &amp; Data</div><h4>KPI Dashboards</h4><p>Weekly and monthly management reporting.</p></div>
+    <div class="sk" data-c="tools" data-b="pop" data-n="Skill"><div class="c">Tools &amp; Data</div><h4>Google Apps Script</h4><p>Sheets-backed internal apps.</p></div>
+    <div class="sk" data-c="tools" data-b="pop" data-n="Skill"><div class="c">Tools &amp; Data</div><h4>Firebase · GitHub Pages</h4><p>Hosting and data for team tools.</p></div>
+    <div class="sk" data-c="tools" data-b="pop" data-n="Skill"><div class="c">Tools &amp; Data</div><h4>Excel Modelling</h4><p>Operational and financial analysis.</p></div>
+  </div>
+  <div class="partners" data-b="pop" data-n="Partners">
+    <span class="lbl">LOGISTICS NETWORK //</span>
+    <span class="chip">Snoonu</span><span class="chip">Porter Express</span><span class="chip">Transcorp</span><span class="chip">Qpost</span><span class="chip">Aramex</span><span class="chip">SMSA</span><span class="chip">Canis</span>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact" class="contact wrap" data-section="Contact">
+  <span class="eyebrow" data-b="type" data-n="Eyebrow">Direct Connect</span>
+  <h2 data-b="type" data-n="Headline">Let's Build an Operation That Scales.</h2>
+  <p class="lead" data-b="type" data-n="Contact Lead">Open to conversations about e-commerce and omnichannel operations roles across Qatar and the GCC.</p>
+  <div class="crow" data-b="pop" data-n="Contact Row">
+    <span class="email">waji.ds92@gmail.com</span>
+    <button class="btn red" id="copyBtn">Copy Email</button>
+  </div>
+  <div class="links" data-b="pop" data-n="Links">
+    <a href="https://qa.linkedin.com/in/mh-abdul-wajid" target="_blank" rel="noopener">in · linkedin.com/in/mh-abdul-wajid</a>
+    <span>☏ +974 3014 0615</span>
+    <span>⌖ Doha, Qatar</span>
+  </div>
+</section>
+</main>
+
+<footer>
+  © 2026 Abdul Wajid · E-Commerce Operations Lead<br>
+  Built in Doha · Assembled by a swarm of (simulated) agents
+</footer>
+
+<div id="agentLayer" aria-hidden="true"></div>
+<div id="buildBar" role="status" aria-live="polite"></div>
+
+<script>
+(function(){
+"use strict";
+/* ---------- Featured tabs ---------- */
+const TABS=[
+ {s:"L1 // ORDER-TO-CASH",h:"End-to-end order flow",p:"Mapped how every web order moves from Magento checkout through the ERP, warehouse and delivery to a reconciled payment."},
+ {s:"L2 // BILLING",h:"Billing on the new ERP",p:"Designed how e-commerce orders are billed and invoiced in Dynamics 365 across both storefronts."},
+ {s:"L3 // INVENTORY SYNC",h:"Real-time stock",p:"Set up real-time inventory sync so the storefronts sell only what the warehouse can ship."},
+ {s:"L4 // FINANCE REPORTING",h:"Reporting finance can trust",p:"Defined e-commerce finance reporting and reconciliation across payment gateways and COD."}
+];
+const tp=document.getElementById("tpanel");
+function showTab(i){const t=TABS[i];tp.innerHTML='<div class="s">'+t.s+'</div><h4>'+t.h+'</h4><p>'+t.p+'</p>';
+  document.querySelectorAll(".tab").forEach((b,j)=>b.classList.toggle("on",j===i));}
+document.querySelectorAll(".tab").forEach(b=>b.addEventListener("click",()=>showTab(+b.dataset.t)));
+showTab(0);
+
+/* ---------- Matrix filters ---------- */
+document.querySelectorAll(".filter").forEach(b=>b.addEventListener("click",()=>{
+  document.querySelectorAll(".filter").forEach(x=>x.classList.toggle("on",x===b));
+  const f=b.dataset.f;
+  document.querySelectorAll(".sk").forEach(s=>s.classList.toggle("off",f!=="all"&&s.dataset.c!==f));
+}));
+
+/* ---------- Copy email ---------- */
+const cb=document.getElementById("copyBtn");
+cb.addEventListener("click",async()=>{
+  try{await navigator.clipboard.writeText("waji.ds92@gmail.com");cb.textContent="Copied ✓";}
+  catch(e){cb.textContent="Select the email";}
+  setTimeout(()=>cb.textContent="Copy Email",1800);
+});
+
+/* ---------- AGENT BUILD ---------- */
+const layer=document.getElementById("agentLayer");
+const bar=document.getElementById("buildBar");
+const mobile=window.matchMedia("(max-width:720px)").matches;
+const reduce=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const AGENT_NAMES=["Layout","Typo","Data","Media","QA","Grid","Copy","Motion","Color","A11y","Perf","Nav","Stats","Cards","Ops","Deploy"];
+const COLORS=["#3ad6ff","#ff6b9a","#ffd166","#7ee2a8","#b69cff","#ff9f43","#5eead4","#f472b6","#a3e635","#60a5fa","#fca5a5","#fde68a","#c4b5fd","#67e8f9","#fdba74","#86efac"];
+const NAG=mobile?8:16, WORKERS=mobile?3:4;
+const items=[...document.querySelectorAll("[data-b]")];
+items.forEach(el=>{el._html=el.innerHTML;});
+let cursors=[],run=0,built=0,startT=0,skipping=false,active=new Set(),scrollRAF=0,driftT=0;
+
+const sleep=ms=>new Promise(r=>setTimeout(r,ms));
+const docRect=el=>{const r=el.getBoundingClientRect();return{x:r.left+scrollX,y:r.top+scrollY,w:r.width,h:r.height};};
+function sizeLayer(){layer.style.height=document.documentElement.scrollHeight+"px";}
+
+function makeCursors(){
+  layer.innerHTML="";cursors=[];
+  const cx=innerWidth/2,cy=scrollY+innerHeight*0.45;
+  for(let i=0;i<NAG;i++){
+    const c=document.createElement("div");c.className="cur";
+    c.innerHTML='<svg viewBox="0 0 16 16"><path d="M1 1 L1 13 L4.5 9.8 L7 15 L9 14 L6.6 9 L11.5 9 Z" fill="'+COLORS[i]+'" stroke="#08080a" stroke-width="1"/></svg><span style="background:'+COLORS[i]+'">'+AGENT_NAMES[i]+'</span>';
+    layer.appendChild(c);
+    const o={el:c,x:cx+(Math.random()-.5)*60,y:cy+(Math.random()-.5)*60,busy:false,color:COLORS[i],name:AGENT_NAMES[i]};
+    place(o,o.x,o.y,0);cursors.push(o);
+  }
+}
+function place(o,x,y,ms){o.el.style.transitionDuration=ms+"ms";o.el.style.transform="translate("+x+"px,"+y+"px)";o.x=x;o.y=y;}
+async function fly(o,x,y,maxMs){const d=Math.hypot(x-o.x,y-o.y);const ms=Math.max(260,Math.min(maxMs||900,d*.75));place(o,x,y,ms);await sleep(ms);}
+
+function drift(){
+  cursors.forEach(o=>{if(o.busy)return;
+    const x=40+Math.random()*(innerWidth-120), y=scrollY+60+Math.random()*(innerHeight-160);
+    place(o,x,y,1400+Math.random()*900);});
+}
+
+function renderBar(state){
+  const dots='<span class="dots">'+COLORS.slice(0,4).map(c=>'<i style="background:'+c+'"></i>').join("")+'</span>';
+  if(state==="done"){
+    const secs=((performance.now()-startT)/1000).toFixed(1);
+    bar.innerHTML=dots+'<span>Rebuilt by <b>'+NAG+'</b> agents in <b>'+secs+'s</b></span><div class="prog"><div style="width:100%"></div></div><button class="replay" id="replayBtn">↻ Replay</button>';
+    document.getElementById("replayBtn").onclick=()=>startBuild();
+    return;
+  }
+  if(state==="static"){
+    bar.innerHTML=dots+'<span>Static view</span><button class="replay" id="replayBtn">▶ Watch the build</button>';
+    document.getElementById("replayBtn").onclick=()=>startBuild(true);
+    return;
+  }
+  const sec=(currentSection()||"Boot");
+  bar.innerHTML=dots+'<span><b>'+NAG+'</b> agents</span><span class="lay"><b>'+built+'</b> / '+items.length+' layers</span><div class="prog"><div style="width:'+(built/items.length*100)+'%"></div></div><span class="st">'+(state||"Building")+' · '+sec+'</span><button id="skipBtn">Skip</button>';
+  document.getElementById("skipBtn").onclick=()=>{skipping=true;};
+}
+function currentSection(){const a=[...active][0];if(!a)return null;const s=a.closest("[data-section]");return s?s.dataset.section:null;}
+
+function hideAll(){
+  items.forEach(el=>{el.classList.remove("bv","typing");el.classList.add("bh");el.innerHTML=el._html;el.style.minHeight="";
+    if(el.dataset.b==="count")el.querySelectorAll(".cnt").forEach(c=>c.textContent="0");});
+}
+function revealNow(el){el.innerHTML=el._html;el.style.minHeight="";el.classList.remove("bh","typing");el.classList.add("bv");}
+
+function selBox(el,o){
+  const r=docRect(el);const s=document.createElement("div");s.className="sel";
+  s.style.cssText="left:"+(r.x-4)+"px;top:"+(r.y-4)+"px;width:"+(r.w+8)+"px;height:"+(r.h+8)+"px;border-color:"+o.color;
+  s.innerHTML='<i></i><i></i><i></i><i></i><b style="background:'+o.color+'">'+(el.dataset.n||"Layer")+' · '+o.name+'</b>';
+  layer.appendChild(s);return s;
+}
+
+async function typeIn(el,myRun){
+  const h=el.offsetHeight;el.style.minHeight=h+"px";
+  const text=el.textContent;el.textContent="";el.classList.remove("bh");el.classList.add("typing");
+  const per=Math.max(6,Math.min(26,1000/text.length));
+  for(let i=1;i<=text.length;i+=(text.length>120?3:text.length>60?2:1)){
+    if(skipping||myRun!==run)return;
+    el.textContent=text.slice(0,i);await sleep(per);
+  }
+  revealNow(el);
+}
+async function countUp(el,myRun){
+  el.classList.remove("bh");el.classList.add("bv");
+  const cs=[...el.querySelectorAll(".cnt")];const t0=performance.now();
+  while(true){const p=Math.min(1,(performance.now()-t0)/700);
+    cs.forEach(c=>c.textContent=Math.round(+c.dataset.to*p));
+    if(p>=1||skipping||myRun!==run)break;await sleep(30);}
+  cs.forEach(c=>c.textContent=c.dataset.to);
+}
+
+async function buildItem(el,o,myRun){
+  active.add(el);
+  const r=docRect(el);
+  const tx=r.x+Math.min(r.w*0.15,40)+Math.random()*Math.min(r.w*0.5,200), ty=r.y+Math.min(r.h*0.5,24);
+  await fly(o,tx,ty);
+  if(skipping||myRun!==run){active.delete(el);return;}
+  const s=selBox(el,o);await sleep(220);
+  const kind=el.dataset.b;
+  if(kind==="type")await typeIn(el,myRun);
+  else if(kind==="count")await countUp(el,myRun);
+  else{
+    el.classList.remove("bh");el.classList.add("bv");
+    if(kind==="glitch"){el.classList.remove("glitch");void el.offsetWidth;el.classList.add("glitch");}
+    // nudge the cursor to bottom-right corner like a resize
+    fly(o,r.x+r.w-6,r.y+Math.min(r.h,260)-6,500);
+    await sleep(kind==="glitch"?720:480);
+  }
+  if(myRun!==run){s.remove();return;}
+  revealNow(el);
+  s.style.opacity="0";setTimeout(()=>s.remove(),400);
+  built++;active.delete(el);renderBar(Math.random()<.5?"Building":"Touring");
+  await sleep(120+Math.random()*200);
+}
+
+function scrollLoop(myRun){
+  if(myRun!==run)return;
+  if(active.size){
+    let minY=Infinity;active.forEach(el=>{const r=docRect(el);minY=Math.min(minY,r.y);});
+    const max=document.documentElement.scrollHeight-innerHeight;
+    const target=Math.max(0,Math.min(max,minY-innerHeight*0.28));
+    const d=target-scrollY;
+    if(Math.abs(d)>1)window.scrollTo(0,scrollY+d*0.06);
+  }
+  scrollRAF=requestAnimationFrame(()=>scrollLoop(myRun));
+}
+
+async function worker(o,q,myRun){
+  while(myRun===run&&!skipping){
+    if(q.i>=items.length)break;
+    const el=items[q.i];
+    if(active.size){
+      let minY=Infinity;active.forEach(a=>minY=Math.min(minY,docRect(a).y));
+      if(docRect(el).y>minY+innerHeight*0.55){await sleep(90);continue;}
+    }
+    q.i++;o.busy=true;
+    await buildItem(el,o,myRun);
+    o.busy=false;
+  }
+}
+
+async function startBuild(fromStatic){
+  run++;const myRun=run;skipping=false;built=0;active.clear();
+  cancelAnimationFrame(scrollRAF);clearInterval(driftT);
+  document.documentElement.style.scrollBehavior="auto";
+  hideAll();window.scrollTo(0,0);sizeLayer();makeCursors();
+  startT=performance.now();renderBar("Booting");
+  await sleep(500);
+  // boot: swarm spreads out
+  cursors.forEach((o,i)=>{const a=i/NAG*Math.PI*2;place(o,innerWidth/2+Math.cos(a)*Math.min(innerWidth*.35,380),innerHeight*.45+Math.sin(a)*160,900);});
+  await sleep(950);
+  if(myRun!==run)return;
+  driftT=setInterval(drift,1500);
+  scrollLoop(myRun);
+  const q={i:0};
+  const workers=cursors.slice(0,WORKERS).map((o,i)=>sleep(i*160).then(()=>worker(o,q,myRun)));
+  await Promise.all(workers);
+  if(myRun!==run)return;
+  finish(myRun);
+}
+
+function finish(myRun){
+  cancelAnimationFrame(scrollRAF);clearInterval(driftT);
+  items.forEach(revealNow);built=items.length;active.clear();
+  layer.querySelectorAll(".sel").forEach(s=>s.remove());
+  cursors.forEach(o=>{const side=Math.random()<.5?-80:innerWidth+80;place(o,side,o.y+(Math.random()-.5)*300,900);o.el.style.opacity="0";});
+  document.documentElement.style.scrollBehavior="";
+  renderBar("done");
+  setTimeout(()=>{if(myRun===run)layer.innerHTML="";},1000);
+}
+
+// skip watcher
+setInterval(()=>{if(skipping&&run){const r=run;skipping=false;run++;finish(run);}},120);
+
+window.addEventListener("resize",()=>{sizeLayer();});
+
+if(reduce){renderBar("static");}
+else{
+  // start after fonts settle so measurements are right
+  (document.fonts&&document.fonts.ready?document.fonts.ready:Promise.resolve()).then(()=>setTimeout(()=>startBuild(),250));
+  hideAll();
+}
+})();
+</script>
+</body>
+</html>
