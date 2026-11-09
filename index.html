@@ -605,7 +605,7 @@ footer{text-align:center;font-family:var(--mono);font-size:11px;color:var(--dim)
     </div>
     <div class="viz rv">
       <span class="pill ill">◆ Illustrative</span>
-      <h4>What 2,000+ orders a month looks like</h4>
+      <h4>What 3,000+ orders a month looks like</h4>
       <div class="cap">Each dot = one order. Fills as you scroll.</div>
       <div class="dots" id="dots" aria-hidden="true"></div>
       <div class="dots-legend"><span>≈ 67 orders / day</span><span>≈ 460 / week</span></div>
@@ -761,7 +761,7 @@ $("#mq").innerHTML=[...EXP,...EXP].map(x=>"<span>"+x+"</span>").join("");
 
 /* ---------- ECOSYSTEM ---------- */
 const STAGES=[
- {k:"user",n:"Customer Experience",what:"The online shopping journey for Sports Corner and Sports For Less customers, from browsing to receiving their order.",resp:["Make sure what the storefront promises (stock, delivery) matches what operations can deliver","Coordinate brand and event launches so customers find products ready to buy"],sys:["Magento storefronts","Sports Corner","Sports For Less"],chal:["Launch-day and peak-event demand (WHOOP Qatar, FIFA World Cup 2022)"],imp:"2,000+ online orders a month (approx.) across two storefronts.",ver:true},
+ {k:"user",n:"Customer Experience",what:"The online shopping journey for Sports Corner and Sports For Less customers, from browsing to receiving their order.",resp:["Make sure what the storefront promises (stock, delivery) matches what operations can deliver","Coordinate brand and event launches so customers find products ready to buy"],sys:["Magento storefronts","Sports Corner","Sports For Less"],chal:["Launch-day and peak-event demand (WHOOP Qatar, FIFA World Cup 2022)"],imp:"3,000+ online orders a month (approx.) across two storefronts.",ver:true},
  {k:"store",n:"Online Storefront",what:"Two Magento storefronts. Sports Corner is the main sports retailer, and Sports For Less was relaunched in 2024 as a discount outlet.",resp:["Run storefront operations for both brands","Relaunched Sports For Less as an outlet for discounted categories","Catalogue and stock readiness for brand launches"],sys:["Magento","Sports Corner","Sports For Less"],chal:["Running two brand storefronts on one operating team","Outlet positioning for discounted categories"],imp:"Two storefronts operated end to end by one team.",ver:true},
  {k:"card",n:"Payment Processing",what:"Online payments and cash on delivery for every order, monitored and reconciled with finance.",resp:["Monitor payment gateways","Apply fraud controls","Reconcile online and COD payments with finance"],sys:["Amazon Payment Services (Payfort)","TapOS","PayLater","Cash on Delivery"],chal:["Matching gateway settlements and COD collections to orders"],imp:"Three payment gateways plus COD, reconciled with finance.",ver:false},
  {k:"erp",n:"ERP & Middleware",what:"The integration layer that moves orders, stock and invoices between the storefronts and the ERP.",resp:["Led the 2023 move from manual fulfilment to a middleware framework","Designed the e-commerce workflow for the 2025 SAP → Dynamics 365 migration","Mapped SKU master data in the 2022 Retail Pro → SAP migration"],sys:["Microsoft Dynamics 365","SAP S/4HANA (2022–2025)","Retail Pro (legacy)","Middleware"],chal:["Two ERP migrations without disrupting live trading","Replacing manual order, stock and invoice handling"],imp:"~70% improvement in request processing through workflow automation.",ver:true},
