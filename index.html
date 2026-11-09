@@ -546,7 +546,7 @@ footer{text-align:center;font-family:var(--mono);font-size:11px;color:var(--dim)
   </div>
   <div class="kstrip" data-b="pop" data-n="KPI Strip">
     <div><div class="n"><span class="cnt" data-to="13">13</span><em>+</em></div><div class="k">Years in e-commerce</div></div>
-    <div><div class="n"><span class="cnt" data-to="2000" data-fmt="1">2,000</span><em>+</em></div><div class="k">Online orders / month (approx.)</div></div>
+    <div><div class="n"><span class="cnt" data-to="3000" data-fmt="1">3,000</span><em>+</em></div><div class="k">Online orders / month (approx.)</div></div>
     <div><div class="n">~<span class="cnt" data-to="70">70</span><em>%</em></div><div class="k">Faster request processing</div></div>
     <div><div class="n"><span class="cnt" data-to="10">10</span></div><div class="k">Member ops team</div></div>
     <div><div class="n"><span class="cnt" data-to="2">2</span></div><div class="k">Storefronts · 2 ERP migrations</div></div>
@@ -584,7 +584,7 @@ footer{text-align:center;font-family:var(--mono);font-size:11px;color:var(--dim)
       <div class="t" style="font-size:18px;max-width:420px">Improvement in request processing through workflow automation — the combined effect of the 2023 storefront-to-ERP middleware and the 2025 Dynamics 365 migration.</div></div>
       <div class="src">Source: Abdul Wajid · approximate figure</div>
     </div>
-    <div class="kpi rv"><div class="top"><span class="label" style="color:var(--muted)">Order volume</span><span class="pill ver">● Verified · approx.</span></div><div class="n"><span class="cnt" data-to="2000" data-fmt="1">2,000</span>+</div><div class="t">Online orders handled per month across both storefronts.</div></div>
+    <div class="kpi rv"><div class="top"><span class="label" style="color:var(--muted)">Order volume</span><span class="pill ver">● Verified · approx.</span></div><div class="n"><span class="cnt" data-to="3000" data-fmt="1">3,000</span>+</div><div class="t">Online orders handled per month across both storefronts.</div></div>
     <div class="kpi rv"><div class="top"><span class="label" style="color:var(--muted)">Team</span><span class="pill ver">● Verified</span></div><div class="n"><span class="cnt" data-to="10">10</span></div><div class="t">Members in the e-commerce operations team I lead.</div></div>
     <div class="kpi rv"><div class="top"><span class="label" style="color:var(--muted)">Storefronts</span><span class="pill ver">● Verified</span></div><div class="n"><span class="cnt" data-to="2">2</span></div><div class="t">Magento storefronts — Sports Corner and Sports For Less.</div></div>
     <div class="kpi rv"><div class="top"><span class="label" style="color:var(--muted)">Transformation</span><span class="pill ver">● Verified</span></div><div class="n"><span class="cnt" data-to="2">2</span></div><div class="t">ERP migrations led on the e-commerce side — Retail Pro → SAP, SAP → Dynamics 365.</div></div>
@@ -605,11 +605,11 @@ footer{text-align:center;font-family:var(--mono);font-size:11px;color:var(--dim)
     </div>
     <div class="viz rv">
       <span class="pill ill">◆ Illustrative</span>
-      <h4>What 2,000+ orders a month looks like</h4>
+      <h4>What 3,000+ orders a month looks like</h4>
       <div class="cap">Each dot = one order. Fills as you scroll.</div>
       <div class="dots" id="dots" aria-hidden="true"></div>
-      <div class="dots-legend"><span>≈ 67 orders / day</span><span>≈ 460 / week</span></div>
-      <div class="foot">Averages derived from the approximate monthly figure (2,000 ÷ 30 days; × 12 ÷ 52 weeks).</div>
+      <div class="dots-legend"><span>≈ 100 orders / day</span><span>≈ 700 / week</span></div>
+      <div class="foot">Averages derived from the approximate monthly figure (3,000 ÷ 30 days; × 12 ÷ 52 weeks).</div>
     </div>
     <div class="viz rv">
       <span class="pill sco">● Operating scope</span>
@@ -761,7 +761,7 @@ $("#mq").innerHTML=[...EXP,...EXP].map(x=>"<span>"+x+"</span>").join("");
 
 /* ---------- ECOSYSTEM ---------- */
 const STAGES=[
- {k:"user",n:"Customer Experience",what:"The online shopping journey for Sports Corner and Sports For Less customers, from browsing to receiving their order.",resp:["Make sure what the storefront promises (stock, delivery) matches what operations can deliver","Coordinate brand and event launches so customers find products ready to buy"],sys:["Magento storefronts","Sports Corner","Sports For Less"],chal:["Launch-day and peak-event demand (WHOOP Qatar, FIFA World Cup 2022)"],imp:"2,000+ online orders a month (approx.) across two storefronts.",ver:true},
+ {k:"user",n:"Customer Experience",what:"The online shopping journey for Sports Corner and Sports For Less customers, from browsing to receiving their order.",resp:["Make sure what the storefront promises (stock, delivery) matches what operations can deliver","Coordinate brand and event launches so customers find products ready to buy"],sys:["Magento storefronts","Sports Corner","Sports For Less"],chal:["Launch-day and peak-event demand (WHOOP Qatar, FIFA World Cup 2022)"],imp:"3,000+ online orders a month (approx.) across two storefronts.",ver:true},
  {k:"store",n:"Online Storefront",what:"Two Magento storefronts. Sports Corner is the main sports retailer, and Sports For Less was relaunched in 2024 as a discount outlet.",resp:["Run storefront operations for both brands","Relaunched Sports For Less as an outlet for discounted categories","Catalogue and stock readiness for brand launches"],sys:["Magento","Sports Corner","Sports For Less"],chal:["Running two brand storefronts on one operating team","Outlet positioning for discounted categories"],imp:"Two storefronts operated end to end by one team.",ver:true},
  {k:"card",n:"Payment Processing",what:"Online payments and cash on delivery for every order, monitored and reconciled with finance.",resp:["Monitor payment gateways","Apply fraud controls","Reconcile online and COD payments with finance"],sys:["Amazon Payment Services (Payfort)","TapOS","PayLater","Cash on Delivery"],chal:["Matching gateway settlements and COD collections to orders"],imp:"Three payment gateways plus COD, reconciled with finance.",ver:false},
  {k:"erp",n:"ERP & Middleware",what:"The integration layer that moves orders, stock and invoices between the storefronts and the ERP.",resp:["Led the 2023 move from manual fulfilment to a middleware framework","Designed the e-commerce workflow for the 2025 SAP → Dynamics 365 migration","Mapped SKU master data in the 2022 Retail Pro → SAP migration"],sys:["Microsoft Dynamics 365","SAP S/4HANA (2022–2025)","Retail Pro (legacy)","Middleware"],chal:["Two ERP migrations without disrupting live trading","Replacing manual order, stock and invoice handling"],imp:"~70% improvement in request processing through workflow automation.",ver:true},
